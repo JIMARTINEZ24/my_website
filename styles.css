@@ -1,0 +1,43 @@
+/* Type selector */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Class selector */
+.main-content {
+    padding: 1em;
+    background-color: #f9f9f9;
+}
+
+/* Relational selector (child combinator) */
+header>h1 {
+    color: #f121ac;
+    text-align: center;
+}
+
+/* Combination selector (type + class) */
+main.main-content {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Pseudo-class */
+a:hover {
+    font-size: 200%;
+    color: #1e90ff;
+}
+
+/* Additional font styling */
+p {
+    color: #800080;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+footer p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+}
