@@ -1,43 +1,91 @@
-/* Type selector */
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    background: url("imgs/Flowers.jpg") no-repeat center center fixed; /* Ensures the background image covers the entire page */
+    background-size: cover; /* Makes sure the background image scales to cover the page */
+    margin: 0;
+    padding: 0;
 }
 
-/* Class selector */
-.main-content {
-    padding: 1em;
+/* Header Styling */
+header {
     background-color: #f9f9f9;
-}
-
-/* Relational selector (child combinator) */
-header>h1 {
-    color: #f121ac;
+    padding: 1em;
     text-align: center;
 }
 
-/* Combination selector (type + class) */
-main.main-content {
-    margin: 0 auto;
+header h1 {
+    color: #1625f7;
+    margin-bottom: 1em;
+}
+
+/* Main Content Styling */
+.main-content {
+    background: linear-gradient(to bottom right, #cfc5ee, #e7c3c3);
+    padding: 2em;
+    margin: 2em auto;
+    border: 5px solid #b307e7;
+    border-radius: 10px;
     max-width: 600px;
 }
 
-/* Pseudo-class */
+/* Column Layout (if used) */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em; /* Space between columns */
+}
+
+.column {
+    flex: 1;
+    padding: 1em;
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Link Styling */
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
 a:hover {
-    font-size: 200%;
+    font-size: 1.1rem; /* Changed to a reasonable size increase */
     color: #1e90ff;
 }
 
-/* Additional font styling */
+/* Paragraph Styling */
 p {
     color: #800080;
     font-size: 1.1rem;
     font-weight: 400;
+    margin: 0 0 1em 0; /* Added margin below paragraphs */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f9f9f9;
+    padding: 1em;
+    text-align: center;
+    margin-top: 2em;
 }
 
 footer p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 0.9rem;
-    text-align: center;
+    margin: 0; /* Removed additional margin to ensure it aligns neatly */
+    padding: 0;
+}
+
+/* Image Styling */
+img {
+    border: 5px solid #000000;
+    border-radius: 10px;
+    margin-bottom: 1em; /* Space below the image */
+    display: block; /* Ensures proper spacing around the image */
+    max-width: 100%; /* Ensures image scales with screen size */
+    height: auto; /* Maintains the aspect ratio */
 }
