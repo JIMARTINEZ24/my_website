@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: url("imgs/Flowers.jpg") no-repeat center center fixed; /* Ensures the background image covers the entire page */
-    background-size: cover; /* Makes sure the background image scales to cover the page */
+    background: url("imgs/Flowers.jpg") no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
@@ -21,6 +21,30 @@ header h1 {
     margin-bottom: 1em;
 }
 
+/* Navigation Styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1e90ff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
 /* Main Content Styling */
 .main-content {
     background: linear-gradient(to bottom right, #cfc5ee, #e7c3c3);
@@ -28,14 +52,27 @@ header h1 {
     margin: 2em auto;
     border: 5px solid #b307e7;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 80%;
+    overflow: hidden;
 }
 
-/* Column Layout (if used) */
+/* Text Content Styling */
+.text-content {
+    overflow: hidden;
+}
+
+/* Float Image Left */
+.float-left {
+    float: left;
+    margin-right: 20px;
+    max-width: 45%;
+}
+
+/* Column Layout */
 .container {
     display: flex;
-    justify-content: space-between;
-    gap: 1em; /* Space between columns */
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 .column {
@@ -53,7 +90,7 @@ a {
 }
 
 a:hover {
-    font-size: 1.1rem; /* Changed to a reasonable size increase */
+    font-size: 1.1rem;
     color: #1e90ff;
 }
 
@@ -62,7 +99,7 @@ p {
     color: #800080;
     font-size: 1.1rem;
     font-weight: 400;
-    margin: 0 0 1em 0; /* Added margin below paragraphs */
+    margin: 0 0 1em 0;
 }
 
 /* Footer Styling */
@@ -76,7 +113,7 @@ footer {
 footer p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 0.9rem;
-    margin: 0; /* Removed additional margin to ensure it aligns neatly */
+    margin: 0;
     padding: 0;
 }
 
@@ -84,8 +121,51 @@ footer p {
 img {
     border: 5px solid #000000;
     border-radius: 10px;
-    margin-bottom: 1em; /* Space below the image */
-    display: block; /* Ensures proper spacing around the image */
-    max-width: 100%; /* Ensures image scales with screen size */
-    height: auto; /* Maintains the aspect ratio */
+    margin-bottom: 1em;
+    display: block;
+    height: auto;
+}
+
+/* Responsive Image Styling */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        max-width: 90%;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .float-left {
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-content {
+        padding: 1em;
+        margin: 1em auto;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .float-left {
+        max-width: 100%;
+        margin: 0 auto 1em;
+        display: block;
+    }
 }

@@ -9,26 +9,33 @@
 </head>
 
 <body>
-    <!-- Added a header section to encapsulate the main heading -->
     <header>
         <h1>Yoshi the Shiba</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">About</a></li>
+                <li><a href="page3.html">Favorite Foods</a></li>
+            </ul>
+        </nav>
     </header>
-    <!-- Added a main section to encapsulate the main content -->
     <main class="main-content">
-        <img src="Yoshi.jpg" alt="Yoshi" width="400" height="400">
-        <p>This site contains various facts about my dog, including but not limited to:</p>
-        <ul>
-            <li>What she eats</li>
-            <li>How we rescued her</li>
-            <li>What she does in her spare time</li>
-            <li>Her sleeping schedule</li>
-        </ul>
-        <p>Click on her name for more! <a href="page2.html">Yoshi</a></p>
-        <a href="https://www.akc.org/dog-breeds/shiba-inu/">American Kennel Club: Shiba Inu</a>
+        <img src="Yoshi.jpg" alt="Yoshi" class="float-left">
+        <div class="text-content">
+            <p>This site contains various facts about my dog, including but not limited to:</p>
+            <ul>
+                <li>What she eats</li>
+                <li>How we rescued her</li>
+                <li>What she does in her spare time</li>
+                <li>Her sleeping schedule</li>
+            </ul>
+            <p>Click on her name for more! <a href="page2.html">Yoshi</a></p>
+            <a href="https://www.akc.org/dog-breeds/shiba-inu/" target="_blank">American Kennel Club: Shiba Inu</a>
+            <!--Link that opens on new tab-->
+            <p>Jump to <a href="#more-info">top of page</a>.</p> <!--Place holder link-->
+        </div>
     </main>
-    <!-- Added a footer section to encapsulate the footer content -->
     <footer>
-        <!-- &copy; is a character entity for the copyright symbol -->
         <p>&copy; 2024 Yoshiniweenie</p>
     </footer>
 </body>
