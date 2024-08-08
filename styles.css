@@ -16,32 +16,31 @@ header {
     text-align: center;
 }
 
-header h1 {
-    color: #1625f7;
-    margin-bottom: 1em;
+/* Flex Container for Navigation Bar */
+.nav-container {
+    display: flex;
+    justify-content: center;
 }
 
-/* Navigation Styling */
-nav ul {
+.nav-menu {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
     gap: 1em;
 }
 
-nav ul li {
+.nav-menu li {
     display: inline;
 }
 
-nav ul li a {
+.nav-menu li a {
     text-decoration: none;
     color: #1e90ff;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+.nav-menu li a:hover {
     text-decoration: underline;
 }
 
@@ -65,17 +64,41 @@ nav ul li a:hover {
 .float-left {
     float: left;
     margin-right: 20px;
-    max-width: 45%;
+    max-width: 30%;
+    /* Adjusted size to fit better on screen */
 }
 
-/* Column Layout */
-.container {
+/* Responsive Image Styling */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+}
+
+/* Grid Layout for Page 2 */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.column {
+    padding: 1em;
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Food Info Layout for Page 3 */
+.food-info {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
 }
 
-.column {
+.food-list,
+.food-avoidance {
     flex: 1;
     padding: 1em;
     background: #f1f1f1;
@@ -122,19 +145,16 @@ img {
     border: 5px solid #000000;
     border-radius: 10px;
     margin-bottom: 1em;
-    display: block;
-    height: auto;
-}
-
-/* Responsive Image Styling */
-.responsive-image {
-    max-width: 100%;
-    height: auto;
 }
 
 /* Media Queries */
 @media (max-width: 800px) {
-    .container {
+    .grid-layout {
+        grid-template-columns: 1fr;
+        /* Stack columns on smaller screens */
+    }
+
+    .food-info {
         flex-direction: column;
     }
 
@@ -150,6 +170,8 @@ img {
         float: none;
         margin: 0 auto;
         display: block;
+        max-width: 50%;
+        /* Adjusted for smaller screens */
     }
 }
 
@@ -167,5 +189,10 @@ img {
         max-width: 100%;
         margin: 0 auto 1em;
         display: block;
+    }
+
+    .responsive-image {
+        max-width: 100%;
+        /* Adjusted for smaller screens */
     }
 }
