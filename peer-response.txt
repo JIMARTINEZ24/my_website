@@ -1,0 +1,5 @@
+"Your dog is very cute. Maybe an additional photos page?"
+Added more pictures of my dog to multiple pages of the site
+
+"I realize the site is still under construction, but now we might want to know the other stories about the rescue, and what she does in her spare time and such."
+Created a 4th page and added more information about Yoshi
