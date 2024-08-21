@@ -1,6 +1,6 @@
 /* General Body Styling */
 body {
-    font-family: quicksand, sans-serif;
+    font-family: Quicksand, sans-serif;
     line-height: 1.6;
     color: #333;
     background: url("imgs/Flowers.jpg") no-repeat center center fixed;
@@ -14,39 +14,41 @@ header {
     background-color: #f9f9f9;
     padding: 1em;
     text-align: center;
+    border-bottom: 2px solid #1e90ff;
 }
 
 /* Flex Container for Navigation Bar */
 .nav-container {
     display: flex;
     justify-content: center;
-    border: 2px solid #1e90ff;
     border-radius: 8px;
     padding: 0.5em;
-    background-color: #e9cfe9;
+    margin-bottom: 1em;
 }
-
 
 .nav-menu {
     list-style-type: none;
-    padding: 0.5em;
+    padding: 0;
     margin: 0;
     display: flex;
-    gap: 1em;
+    gap: 2em;
     border: 2px solid #1e90ff;
     border-radius: 8px;
-    background-color: #f1f1f1;
+    background: linear-gradient(to bottom right, #eed2fc, #e7c3c3);
 }
-
 
 .nav-menu li {
     display: inline;
+    padding: 0.5em 1em;
 }
 
 .nav-menu li a {
     text-decoration: none;
     color: #1e90ff;
     font-weight: bold;
+    padding: 0.75em 1.5em;
+    display: block;
+    border-radius: 8px;
 }
 
 .nav-menu li a:hover {
@@ -58,33 +60,45 @@ header {
     background: linear-gradient(to bottom right, #cfc5ee, #e7c3c3);
     padding: 2em;
     margin: 2em auto;
-    border: 5px solid #b307e7;
+    border: 5px solid #e180ff;
     border-radius: 10px;
     max-width: 80%;
     overflow: hidden;
 }
 
-/* Text Content Styling */
-.text-content {
-    overflow: hidden;
-}
-
-/* Float Image Left */
-.float-left {
-    float: left;
-    margin-right: 20px;
-    max-width: 30%;
+/* Content Wrapper Styling */
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    flex-wrap: wrap;
 }
 
 /* Responsive Image Styling */
 .responsive-image {
-    max-width: 60%;
+    float: left;
+    width: 40%;
+    max-width: 650px;
+    min-width: 200px;
     height: auto;
-    display: block;
-    margin: 1em auto;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    /* Space below the image */
 }
 
-/* Grid Layout for Page 2 */
+/* Text Content Styling */
+.text-content {
+    flex: 1;
+    overflow: hidden;
+    background: #f1f1f1;
+    padding: 1em;
+    border-radius: 8px;
+    border: 2px solid #1e90ff;
+}
+
+/* Grid Layout for About */
 .grid-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -94,11 +108,11 @@ header {
 .column {
     padding: 1em;
     background: #f1f1f1;
-    border: 1px solid #ddd;
+    border: 2px solid #1e90ff;
     border-radius: 8px;
 }
 
-/* Food Info Layout for Page 3 */
+/* Food Info Layout */
 .food-info {
     display: flex;
     flex-wrap: wrap;
@@ -110,7 +124,7 @@ header {
     flex: 1;
     padding: 1em;
     background: #f1f1f1;
-    border: 1px solid #ddd;
+    border: 2px solid #1e90ff;
     border-radius: 8px;
 }
 
@@ -127,7 +141,7 @@ a:hover {
 
 /* Paragraph Styling */
 p {
-    color: #800080;
+    color: #000000;
     font-size: 1.1rem;
     font-weight: 400;
     margin: 0 0 1em 0;
@@ -139,6 +153,8 @@ footer {
     padding: 1em;
     text-align: center;
     margin-top: 2em;
+    border-top: 2px solid #1e90ff;
+    border-bottom: 2px solid #1e90ff;
 }
 
 footer p {
@@ -150,7 +166,7 @@ footer p {
 
 /* Image Styling */
 img {
-    border: 5px solid #000000;
+    border: 5px solid #000;
     border-radius: 10px;
     margin-bottom: 1em;
 }
@@ -167,16 +183,41 @@ img {
     .nav-menu {
         flex-direction: column;
         align-items: center;
-        gap: 0.5em;
-    }
-
-    .nav-menu li {
-        text-align: center; /* Center-align text */
+        gap: 1.5em;
     }
 
     .nav-menu li a {
         font-size: 1rem;
-        padding: 0.5em 0;
+        padding: 0.75em 1em;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .responsive-image {
+        float: none;
+        width: 50%;
+        margin: 0 0 1em 0;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .column {
+        margin-bottom: 1em;
+    }
+
+    .food-info {
+        flex-direction: column;
+    }
+
+    .food-list,
+    .food-avoidance {
+        width: auto
     }
 }
 
@@ -186,13 +227,24 @@ img {
     }
 
     .nav-menu {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center menu items */
-        gap: 0.25em; /* Adjust spacing */
+        gap: 1em;
     }
 
     .nav-menu li a {
         font-size: 0.9rem;
-        padding: 0.5em;
+        padding: 0.5em 0.75em;
+    }
+
+    .responsive-image {
+        margin-bottom: 0.5em;
+    }
+
+    .main-content {
+        padding: 1em;
+        margin: 1em;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr;
     }
 }
